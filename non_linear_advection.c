@@ -13,7 +13,16 @@ int main(int argc, char **argv)
 	
 	double delta_x,L,t_max,delta_t;
 	double *x, *u_init, *u_final;
-	t_max =atof(argv[1]);	
+
+	if(argv[1]!=0)
+	{
+		t_max =atof(argv[1]);
+	}
+	else
+	{
+		t_max =4.0;
+	}
+		
 	L=4.0;
 	delta_x=0.05;
 	delta_t=0.5*delta_x;	
